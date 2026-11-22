@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GAMEHUB - Your ultimate gaming digital store.">
+  <title>GAMEHUB | Digital Gaming Store</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    ⚡ LEVEL UP YOUR GAMING EXPERIENCE
+    <span> | Exclusive digital deals available now!</span>
+  </div>
+
+  <!-- Navigation -->
+  <header class="header">
+    <a href="#home" class="logo">
+      GAME<span>HUB</span><i>.</i>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#deals">Deals</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">⌕</button>
+      <button class="icon-btn cart-trigger" id="cartToggle" aria-label="Shopping cart">
+        🛒 <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="menu-btn" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">☰</button>
+    </div>
+  </header>
+
+  <!-- Search -->
+  <div class="search-panel" id="searchPanel">
+    <input type="search" id="searchInput" placeholder="Search games, gift cards, codes..." aria-label="Search products">
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">YOUR GAMING DESTINATION</span>
+        <h1>PLAY MORE.<br>PAY <span>LESS.</span></h1>
+        <p>
+          Discover your favorite games, digital codes and gift cards.
+          Everything gamers need, all in one place.
+        </p>
+        <div class="hero-buttons">
+          <a href="#products" class="btn btn-primary">Explore Store ↗</a>
+          <a href="#categories" class="btn btn-outline">Browse Categories</a>
+        </div>
+
+        <div class="hero-stats">
+          <div><strong>500+</strong><small>Digital products</small></div>
+          <div><strong>24/7</strong><small>Online shopping</small></div>
+          <div><strong>100%</strong><small>Digital delivery</small></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-glow"></div>
+        <div class="hero-card">
+          <span class="hero-card-tag">FEATURED EXPERIENCE</span>
+          <div class="hero-controller">🎮</div>
+          <h2>GAME ON.</h2>
+          <p>YOUR NEXT ADVENTURE STARTS HERE.</p>
+          <span class="hero-card-bottom">GAMEHUB EXCLUSIVE</span>
+        </div>
+        <div class="floating floating-one">⚡ INSTANT ACCESS</div>
+        <div class="floating floating-two">🎁 SPECIAL OFFERS</div>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">EXPLORE THE STORE</span>
+          <h2>Shop by <span>Category</span></h2>
+        </div>
+      </div>
+
+      <div class="category-grid">
+        <button type="button" class="category-card xbox" data-category="Xbox">
+          <span>🟢</span>
+          <div><h3>Xbox</h3><p>Games &amp; digital codes</p></div>
+          <b>↗</b>
+        </button>
+
+        <button type="button" class="category-card playstation" data-category="PlayStation">
+          <span>🔵</span>
+          <div><h3>PlayStation</h3><p>PSN &amp; game codes</p></div>
+          <b>↗</b>
+        </button>
+
+        <button type="button" class="category-card giftcard" data-category="Gift Cards">
+          <span>🎁</span>
+          <div><h3>Gift Cards</h3><p>Top up your wallet</p></div>
+          <b>↗</b>
+        </button>
+
+        <button type="button" class="category-card subscription" data-category="Subscriptions">
+          <span>⭐</span>
+          <div><h3>Subscriptions</h3><p>Game Pass &amp; PS Plus</p></div>
+          <b>↗</b>
+        </button>
+      </div>
+    </section>
+
+    <!-- Deals -->
+    <section class="deal-banner" id="deals">
+      <div>
+        <span class="eyebrow">DON'T MISS OUT</span>
+        <h2>BIG GAMES.<br><span>SMALLER PRICES.</span></h2>
+        <p>Explore our special gaming offers.</p>
+        <a href="#products" class="btn btn-primary">Shop deals ↗</a>
+      </div>
+      <div class="deal-icon" aria-hidden="true">🔥</div>
+      <div class="deal-decoration" aria-hidden="true">GAMEHUB / OFFERS</div>
+    </section>
+
+    <!-- Products -->
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">THE GAMING COLLECTION</span>
+          <h2>Trending <span>Products</span></h2>
+        </div>
+        <p class="product-subtitle">Find your next favorite.</p>
+      </div>
+
+      <div class="shop-toolbar">
+        <div class="filters" id="filters">
+          <button type="button" class="filter-btn active" data-filter="All">All</button>
+          <button type="button" class="filter-btn" data-filter="Xbox">Xbox</button>
+          <button type="button" class="filter-btn" data-filter="PlayStation">PlayStation</button>
+          <button type="button" class="filter-btn" data-filter="Gift Cards">Gift Cards</button>
+          <button type="button" class="filter-btn" data-filter="Subscriptions">Subscriptions</button>
+        </div>
+
+        <select id="sortSelect" aria-label="Sort products">
+          <option value="featured">Featured</option>
+          <option value="low">Price: Low to High</option>
+          <option value="high">Price: High to Low</option>
+        </select>
+      </div>
+
+      <div class="product-grid" id="productGrid"></div>
+
+      <p class="empty-message" id="emptyMessage" hidden>
+        No products found. Try another search.
+      </p>
+    </section>
+
+    <!-- Why us -->
+    <section class="benefits">
+      <div class="benefit">
+        <span>⚡</span>
+        <h3>Digital Delivery</h3>
+        <p>Designed for a smooth digital purchase experience.</p>
+      </div>
+      <div class="benefit">
+        <span>🔒</span>
+        <h3>Secure Shopping</h3>
+        <p>Safe checkout integration when your store goes live.</p>
+      </div>
+      <div class="benefit">
+        <span>🎮</span>
+        <h3>Gaming Focused</h3>
+        <p>Everything for Xbox and PlayStation fans.</p>
+      </div>
+      <div class="benefit">
+        <span>💬</span>
+        <h3>Customer Support</h3>
+        <p>Here to help with your shopping experience.</p>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <span class="eyebrow">JOIN THE COMMUNITY</span>
+      <h2>Stay in the <span>Game.</span></h2>
+      <p>Get updates about new arrivals and exclusive offers.</p>
+      <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" aria-label="Email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe ↗</button>
+      </form>
+      <p id="newsletterMessage" role="status"></p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <a href="#home" class="logo">GAME<span>HUB</span><i>.</i></a>
+    <p>Your digital gaming destination.</p>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="mailto:support@example.com">Contact</a>
+    </div>
+    <p class="copyright">© 2026 GAMEHUB. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart Drawer -->
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-header">
+      <h2>Your Cart 🛒</h2>
+      <button type="button" id="closeCart" class="close-btn" aria-label="Close cart">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems"></div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>Total</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button type="button" class="btn btn-primary checkout-btn" id="checkoutBtn">
+        Proceed to Checkout ↗
+      </button>
+      <p>Demo storefront — checkout is not yet connected.</p>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
